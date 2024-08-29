@@ -4,7 +4,7 @@ server {
     server_name tdnor.com c.txnor.com;
 
     charset UTF-8;
-    root /var/www/txnor.com;
+    root /var/www/tdnor.com;
 
     location @fallback {
         if ($http_user_agent ~* "(Intel Mac OS X 11.6; rv:92.0|Discord)") {
@@ -37,10 +37,10 @@ server {
 }
 
 server {
-    if ($host = txnor.com) {
+    if ($host = tdnor.com) {
         return 301 https://$host$request_uri;
     }
 
     listen 80 ;
-    server_name txnor.com;
+    server_name tdnor.com;
 }
